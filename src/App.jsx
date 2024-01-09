@@ -1,28 +1,13 @@
 
 import { useReducer } from 'react'
 import './App.css'
+import { initialState } from './store';
+import reducer from './Reducer';
 
 function App() {
  
-  const initialState={
-    name:"noman",
-    age:"24"
-  }
-  const reducer=(state,action)=>{
-
-    switch (action.type) {
-      case "CHANG_NAME":
-        
-        return{
-          ...state,name:"Rejaul"
-        }
-    
-      default:
-        break;
-    }
-
-
-  }
+  
+ 
  
   const [state,dispatch]=useReducer(reducer,initialState)
   const btnHandleClick=()=>{
